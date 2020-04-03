@@ -1,0 +1,73 @@
+#intro{
+  background-color: #b1fc03;
+}
+
+.container-fluid{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  line-height: 2;
+}
+
+h2,h3,p{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#brand{
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+}
+
+#phone{
+  height: 700px;
+  width: 350px;
+  transform: rotate(20deg);
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+a{
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+}
+
+li{
+  padding: 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.font{
+  width: 200px;
+  height: 200px;
+}
+
+em{
+  font-weight: 900;
+  text-align: center;
+}
+
+p{
+  color: #4f4d4d;
+  font-size: 20px;
+  line-height: 2.5;
+  text-align: center
+}
+
+.ad{
+  text-align: center;
+}
+
+.icon{
+  
+  display:block;
+  margin:auto;
+}
