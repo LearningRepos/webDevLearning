@@ -1,5 +1,6 @@
 #intro{
   background-color: #b1fc03;
+  padding-bottom: 70px;
 }
 
 .container-fluid{
@@ -25,11 +26,16 @@ h2,h3,p{
 }
 
 #phone{
-  height: 700px;
-  width: 350px;
+  height: 600px;
+  width: 400px;
   transform: rotate(20deg);
   padding-top: 30px;
   padding-left: 50px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  right: 20%;
 }
 
 a{
@@ -70,4 +76,62 @@ p{
   padding-top: 50px;
   display:block;
   margin:auto;
+}
+
+#feature-summary{
+  position: relative;
+  padding: 7% 15%;
+  background-color: #FFF;
+  z-index: 3;
+}
+
+#review{
+  padding: 7% 15%;
+  background-color: #b1fc03;
+  color: white;
+  text-align: center;
+}
+
+.review-image{
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+#brand{
+  background-color: #b1fc03;
+  text-align: center;
+}
+
+.sponsor{
+  padding: 50px;
+}
+
+.carousel-item{
+  padding: 7% 15%;
+}
+
+h2{
+  text-align: center;
+  font-weight: 900;
+}
+
+.buy{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #b1fc03;
+}
+
+#price{
+  padding: 90px;
+}
+
+#plan{
+  text-align: center;
+}
+
+.prtab{
+  padding: 2% 2%;
 }

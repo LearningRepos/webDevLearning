@@ -7,7 +7,8 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Titillium+Web&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <script defer src = "https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
 
   <title>VacDog-A Vacation App</title>
@@ -24,7 +25,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <a id = "brand" class="navbar-brand" href="#">VacDog</a>
+          <a id="brand" class="navbar-brand" href="#">VacDog</a>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -43,13 +44,13 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-12 col-sm-12">
-            <h1 class = "text-white">The best vacation app for your dog to travel around the world</h1>
-            <button type="button" class = "btn btn-dark btn-lg"> <i class="fab fa-apple"></i> Download</button>
-            <button type="button" class = "btn btn-outline-light btn-lg"><i class="fab fa-google-play"></i> Download</button>
+            <h1 class="text-white">The best vacation app for your dog to travel around the world</h1>
+            <button type="button" class="btn btn-dark btn-lg"> <i class="fab fa-apple"></i> Download</button>
+            <button type="button" class="btn btn-outline-light btn-lg"><i class="fab fa-google-play"></i> Download</button>
           </div>
 
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <img id = "phone" src="bongos.png" alt="App-Show">
+          <div class="col-lg-6 col-md-12 col-sm-12 pic">
+            <img id="phone" src="bongos.png" alt="App-Show">
           </div>
         </div>
       </div>
@@ -57,79 +58,152 @@
 
   </section>
 
-  <section id="feature-summary">
+  <section id ="feature-summary">
     <div class="row">
       <div class="col-lg-4 col-md-12 col-sm-12">
         <ul>
-          <li><img class = "icon" src="https://img.icons8.com/dusk/64/000000/us-dollar.png"/></li>
-          <li class = "ad"><h3> <em>Cheap</em></h3></li>
-          <li><p>Won't break the bank due to our various price points suited to any customer</p></li>
+          <li><img class="icon" src="https://img.icons8.com/dusk/64/000000/us-dollar.png" /></li>
+          <li class="ad">
+            <h3> <em>Cheap</em></h3>
+          </li>
+          <li>
+            <p>Won't break the bank due to our various price points suited to any customer</p>
+          </li>
         </ul>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
         <ul>
-          <li><img class = "icon" src="https://img.icons8.com/cute-clipart/64/000000/dog.png"/></li>
-          <li class = "ad"><h3><em>Exciting</em></h3></li>
-          <li><p>Your dog will have the best time of their life as they travel to exciting places</p></li>
+          <li><img class="icon" src="https://img.icons8.com/cute-clipart/64/000000/dog.png" /></li>
+          <li class="ad">
+            <h3><em>Exciting</em></h3>
+          </li>
+          <li>
+            <p>Your dog will have the best time of their life as they travel to exciting places</p>
+          </li>
         </ul>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
         <ul>
-          <li><img class = "icon" src="https://img.icons8.com/dusk/64/000000/world-map.png"/></li>
-          <li class = "ad"><h3><em>Worldwide</em></h3></li>
-          <li><p>From the high mountains of Chile to the lowest point in the Dead Sea, your dog truly will enjoy their experience</p></li>
+          <li><img class="icon" src="https://img.icons8.com/dusk/64/000000/world-map.png" /></li>
+          <li class="ad">
+            <h3><em>Worldwide</em></h3>
+          </li>
+          <li>
+            <p>From the high mountains of Chile to the lowest point in the Dead Sea, your dog truly will enjoy their experience</p>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="review">
-    <h2>VacDog made this whole experience memorable for me. For once in my life I didnt look angry.</h2>
-    <img src="https://bit.ly/3aBB2QP" alt="dog-review">
-    <h6>Rover, Texas</h6>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 style="font-family: 'Merriweather', serif; font-size:3.5rem; float:left;">VacDog made this whole experience memorable for me. For once in my life I didnt look angry.</h2>
+          <img class="review-image" src="https://bit.ly/39DgExe" alt="dog-review">
+          <p style="color:white;">Rover, Texas</p>
+        </div>
+        <div class="carousel-item">
+          <h2 style="font-family: 'Merriweather', serif; font-size:3.5rem; float:left;">If I were to describe VacDog in 3 words it would be : fun, easy, and paw-sitive</h2>
+          <img class="review-image" src="https://bit.ly/39DgExe" alt="dog-review">
+          <p style="color:white;">Charlie, California</p>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </section>
 
   <section id="brand">
-    <img src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/TechCrunch.png" alt="TechCrunch">
-    <img src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/bizinsider.png" alt="Buisness Insider">
-    <img src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/mashable.png" alt="Mashable">
-    <img src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/tnw.png" alt="TNW">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <img class="sponsor" src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/TechCrunch.png" alt="TechCrunch">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <img class="sponsor" src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/bizinsider.png" alt="Buisness Insider">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <img class="sponsor" src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/mashable.png" alt="Mashable">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <img class="sponsor" src="https://raw.githubusercontent.com/londonappbrewery/TinDog-Start/master/images/tnw.png" alt="TNW">
+      </div>
+    </div>
   </section>
 
   <section id="price">
-    <h2>Flexible plans depending on your budget</h2>
+    <h1 id = "plan" >Flexible plans depending on your budget</h2>
     <p>A simple payment is all that's needed!</p>
 
-    <h2>One Timer Otterhound</h2>
-    <h2>100$</h2>
-    <p>A vacation in state for 1 day</p>
-    <p>Perfect for owners who are attached to their pet or budget oriented</p>
-    <button type="button"> I Want This</button>
-
-    <h2>Sensible Exploring Shibe</h2>
-    <h2>1000$</h2>
-    <p>A vacation in a neighboring country for 1 week</p>
-    <p>Covers travel and food along with round trip flights</p>
-    <p>Perfect for owners who want a Goldilocks Plan</p>
-    <button type="button"> I Want This</button>
-
-    <h2>Crazy Corgi</h2>
-    <h2>10000$</h2>
-    <p>A vacation in any of our extensive countries for one month</p>
-    <p>Covers travel and food along with round trip flights all in first class</p>
-    <p>Perfect for owners who want a break from their pet</p>
-    <button type="button"> I Want This</button>
-  </section>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 prtab">
+        <div class="card">
+          <div class="card-header">
+            <h2>One Timer Otterhound</h2>
+          </div>
+          <div class="card-body">
+            <h2>100$</h2>
+            <p>A vacation in state for 1 day</p>
+            <p>Must provide food and gas for dog</p>
+            <p>Perfect for owners who are attached to their pet or budget oriented</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn buy">I Want This</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 prtab">
+        <div class="card">
+          <div class="card-header">
+            <h2>Sensible Exploring Shibe</h2>
+          </div>
+          <div class="card-body">
+            <h2>1000$</h2>
+            <p>A vacation in a neighboring country for 1 week</p>
+            <p>Covers travel and food along with round trip flights</p>
+            <p>Perfect for owners who want a Goldilocks Plan</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn buy">I Want This</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 prtab">
+        <div class="card">
+          <div class="card-header">
+            <h2>Crazy Corgi</h2>
+          </div>
+          <div class="card-body">
+            <h2>10000$</h2>
+            <p>A vacation in any of our extensive countries for one month</p>
+            <p>Covers travel and food along with round trip flights all in first class</p>
+            <p>Perfect for owners who want a break from their pet</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn buy">I Want This</button>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
 
   <section id="remind">
     <h3>Find the perfect vacation for your dog</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
+    <button type="button" class="btn btn-dark btn-lg"> <i class="fab fa-apple"></i> Download</button>
+    <button type="button" class="btn btn-dark btn-lg"><i class="fab fa-google-play"></i> Download</button>
   </section>
 
   <footer>
     <p>© Copyright 2020 TinDog</p>
-    <a href="https://icons8.com/icon/42863/us-dollar">US Dollar icon by Icons8</a>
+    <p><a href="https://icons8.com/icon/42863/us-dollar">US Dollar icon by Icons8</a></p>
+
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
