@@ -56,10 +56,10 @@ em{
 }
 
 p{
-  color: #4f4d4d;
+  color: 	#808080;
   font-size: 20px;
   line-height: 2.5;
-  text-align: center
+  text-align: center;
 }
 
 .ad{
@@ -67,7 +67,7 @@ p{
 }
 
 .icon{
-  
+  padding-top: 50px;
   display:block;
   margin:auto;
 }
