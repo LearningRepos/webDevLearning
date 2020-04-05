@@ -1,31 +1,31 @@
-#intro{
+#intro {
   background-color: #b1fc03;
   padding-bottom: 70px;
 }
 
-.container-fluid{
+.container-fluid {
   padding-top: 3%;
   padding-bottom: 3%;
   padding-left: 15%;
   padding-right: 15%;
 }
 
-h1{
+h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   line-height: 2;
 }
 
-h2,h3,p{
+h2, h3, p {
   font-family: 'Titillium Web', sans-serif;
 }
 
-#brand{
+#brand {
   font-family: 'Pacifico', cursive;
   font-size: 4rem;
 }
 
-#phone{
+#phone {
   height: 600px;
   width: 400px;
   transform: rotate(20deg);
@@ -38,100 +38,136 @@ h2,h3,p{
   right: 20%;
 }
 
-a{
+a {
   font-family: 'Pacifico', cursive;
   font-size: 2rem;
 }
 
-li{
+li {
   padding: 20px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-.font{
+.font {
   width: 200px;
   height: 200px;
 }
 
-em{
+em {
   font-weight: 900;
   text-align: center;
 }
 
-p{
-  color: 	#808080;
+p {
+  color: #808080;
   font-size: 20px;
   line-height: 2.5;
   text-align: center;
 }
 
-.ad{
+.ad {
   text-align: center;
 }
 
-.icon{
+.icon {
   padding-top: 50px;
-  display:block;
-  margin:auto;
+  display: block;
+  margin: auto;
 }
 
-#feature-summary{
+#feature-summary {
   position: relative;
   padding: 7% 15%;
   background-color: #FFF;
   z-index: 3;
 }
 
-#review{
+#review {
   padding: 7% 15%;
   background-color: #b1fc03;
   color: white;
   text-align: center;
 }
 
-.review-image{
+.review-image {
   width: 10%;
   height: 10%;
   border-radius: 50%;
   margin: 20px;
 }
 
-#brand{
+#brand {
   background-color: #b1fc03;
   text-align: center;
 }
 
-.sponsor{
+.sponsor {
   padding: 50px;
 }
 
-.carousel-item{
+.carousel-item {
   padding: 7% 15%;
 }
 
-h2{
+h2 {
   text-align: center;
   font-weight: 900;
 }
 
-.buy{
+.buy {
   margin-left: auto;
   margin-right: auto;
   display: block;
   background-color: #b1fc03;
 }
 
-#price{
+#price {
   padding: 90px;
 }
 
-#plan{
+#plan {
   text-align: center;
 }
 
-.prtab{
+.prtab {
   padding: 2% 2%;
+}
+
+@media screen and (max-width:1160px) {
+  #phone {
+    position: static;
+    transform: rotate(0);
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+#remind {
+  background-color: #b1fc03;
+  color: #FFF;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.butt{
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+footer{
+  text-align: center;
+  padding-top: 50px;
+  background-color: #FFF;
+}
+
+#credits{
+  color: #808080;
+  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
 }
