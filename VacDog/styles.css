@@ -1,23 +1,60 @@
+body{
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  color: #FFF;
+  line-height: 2;
+  text-align:left;
+}
+
+h2 {
+  font-weight: 900;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h3 {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+  color: #808080;
+  font-size: 20px;
+  line-height: 2.5;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 20px;
+}
+
+em {
+  font-weight: 900;
+}
+
+footer {
+  padding-top: 50px;
+  background-color: #FFF;
+}
+
 #intro {
   background-color: #b1fc03;
   padding-bottom: 70px;
 }
 
 .container-fluid {
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 15%;
-  padding-right: 15%;
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
-  line-height: 2;
-}
-
-h2, h3, p {
-  font-family: 'Titillium Web', sans-serif;
+  padding: 3% 15% 3% 15%;
 }
 
 #brand {
@@ -38,38 +75,11 @@ h2, h3, p {
   right: 20%;
 }
 
-a {
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
-}
-
-li {
-  padding: 20px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.font {
-  width: 200px;
-  height: 200px;
-}
-
-em {
-  font-weight: 900;
-  text-align: center;
-}
-
-p {
-  color: #808080;
-  font-size: 20px;
-  line-height: 2.5;
-  text-align: center;
-}
-
-.ad {
-  text-align: center;
+#feature-summary {
+  position: relative;
+  padding: 7% 15%;
+  background-color: #FFF;
+  z-index: 3;
 }
 
 .icon {
@@ -78,18 +88,16 @@ p {
   margin: auto;
 }
 
-#feature-summary {
-  position: relative;
-  padding: 7% 15%;
-  background-color: #FFF;
-  z-index: 3;
-}
-
 #review {
   padding: 7% 15%;
   background-color: #b1fc03;
   color: white;
-  text-align: center;
+}
+
+#doggy-review {
+  font-family: 'Merriweather', serif;
+  font-size: 3.5rem;
+  float: left;
 }
 
 .review-image {
@@ -99,22 +107,25 @@ p {
   margin: 20px;
 }
 
+.carousel-item {
+  padding: 7% 15%;
+}
+
 #brand {
   background-color: #b1fc03;
-  text-align: center;
 }
 
 .sponsor {
   padding: 50px;
 }
 
-.carousel-item {
-  padding: 7% 15%;
+#price {
+  padding: 90px;
 }
 
-h2 {
-  text-align: center;
-  font-weight: 900;
+#plan {
+  color: black;
+  text-align:center;
 }
 
 .buy {
@@ -124,50 +135,40 @@ h2 {
   background-color: #b1fc03;
 }
 
-#price {
-  padding: 90px;
-}
-
-#plan {
-  text-align: center;
-}
-
-.prtab {
+.expand-card {
   padding: 2% 2%;
-}
-
-@media screen and (max-width:1160px) {
-  #phone {
-    position: static;
-    transform: rotate(0);
-  }
-
-  h1 {
-    text-align: center;
-  }
 }
 
 #remind {
   background-color: #b1fc03;
   color: #FFF;
-  text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.butt{
+#remind-plan{
+  text-align:center;
+}
+
+.butt {
   margin-left: 40px;
   margin-top: 40px;
 }
 
-footer{
-  text-align: center;
-  padding-top: 50px;
-  background-color: #FFF;
-}
-
-#credits{
+#credits {
   color: #808080;
   font-size: 20px;
   font-family: 'Titillium Web', sans-serif;
 }
+
+/* Just a responsive feature for mobiles to help the image
+@media screen and (max-width:1160px) {
+  #phone {
+    position: static;
+    transform: rotate(0);
+  }
+  h1 {
+    text-align: center;
+  }
+}
+*/
