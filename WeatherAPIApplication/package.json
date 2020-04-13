@@ -1,0 +1,14 @@
+{
+  "name": "weatherapiapplication",
+  "version": "1.0.0",
+  "description": "A server which utilizes a weather api to show weather in a place",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mihir Achyuta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
