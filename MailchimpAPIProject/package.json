@@ -1,0 +1,16 @@
+{
+  "name": "mailchimpapiproject",
+  "version": "1.0.0",
+  "description": "A signup page with use of the Mailchimp API to store their details",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mihir Achyuta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
