@@ -1,0 +1,40 @@
+Document Purpose : A reference sheet to implement SQL Basics (CRUD)
+
+//Create
+//How to create a table
+CREATE TABLE table_name(
+  data_type1 column_name1,
+  data_type2 column_name2
+  PRIMARY KEY (data_type) //only can have unique values and uniquely identifies table record
+)
+
+//Insert
+//Inserting data into a table
+INSERT INTO table_name(column_1, column_2) //only needed if you're not filling out all the columns
+VALUES(value_1, value_2)
+
+//Read
+//Selecting all data from database
+SELECT * FROM table_name
+
+//Selecting certain columns
+SELECT column_1, column_2
+FROM table_name
+WHERE specify_data_type = value //used to find a specific row
+
+//Update
+
+//updating tables in general
+UPDATE table_name
+SET column_1 = "value_1". column_2 = "value_2"
+Where condition //dont want to replace everything so put this
+
+//update column in SQL table
+ALTER TABLE table_name
+ADD/DROP/ALTER column_name data_type;
+
+//Delete
+
+//deleting a column
+DELETE FROM table_name
+WHERE condition; //include so u dont delete everything from table
