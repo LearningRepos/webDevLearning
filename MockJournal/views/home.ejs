@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mock Blog</title>
+</head>
+<%- include("partials/header") %>
+
+<body>
+  <h1>Home</h1>
+  <p><%= homeContent %></p>
+  <% if(newItems.length>=1){%>
+  <%    for(var i = 0; i<newItems.length; i++){ %>
+          <h1><%= newItems[i].title %></h1>
+          <p><%= newItems[i].body.substring(0,99) + "..." %> <a href="/posts/<%= homeContent %>">Read More</a></p> 
+  <%  }}%>
+
+
+</body>
+<%- include("partials/footer") %>
+
+</html>

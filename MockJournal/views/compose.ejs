@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Compose</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <%- include("partials/header") %>
+  <body>
+    <h1>Compose</h1>
+
+    <form action="/compose" method="POST">
+      <p><strong>Title:</strong></p>
+      <input type="text" name="composeText" value="" size = "170">
+      <p><strong>Post</strong></p>
+      <textarea cols="172" rows="10" id="textbox" type="text" name="bigComposeText"></textarea>
+      <br>
+      <button class = "btn btn-primary btn-lg" type="submit" name="button">Publish:</button>
+    </form>
+  </body>
+  <%- include("partials/footer") %>
+</html>
