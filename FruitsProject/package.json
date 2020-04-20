@@ -1,0 +1,14 @@
+{
+  "name": "fruitsproject",
+  "version": "1.0.0",
+  "description": "A fruits project with a native MongoDB Driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mihir Achyuta",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.5.6"
+  }
+}
