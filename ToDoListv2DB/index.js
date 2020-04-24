@@ -5,10 +5,9 @@ const https = require("https");
 const bp = require("body-parser");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/listDB", {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-});
+mongoose.connect('mongodb://localhost:27017/todolistDB', { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+
+const _ = require("lodash");
 
 app.use(bp.urlencoded({
   extended: true
@@ -71,7 +70,7 @@ app.get("/", function(req, res) {
       });
     } else {
       res.render("index", {
-        listTitle: "Today's List",
+        listTitle: "Today",
         newItems: items
       });
     }
@@ -85,41 +84,67 @@ app.get("/about", function(req, res) {
 
 app.post("/", function(req, res) {
   const itemName = req.body.task;
+  const listName = req.body.list;
   const item = new Item({
     name: itemName
   });
 
-  item.save();
-  res.redirect("/");
+  if(listName === "Today"){
+    item.save();
+    res.redirect("/");
+  }else{
+    List.findOne({name:listName}, function(err,found){
+      found.items.push(item);
+      found.save();
+      res.redirect("/" + listName);
+    });
+  }
+
 });
 
 app.post("/delete", function(req, res) {
   const checked = req.body.checkbox;
+  const listName = req.body.listName;
 
-  Item.findByIdAndRemove(checked, function(err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("deleted");
-      res.redirect("/");
-    }
-  });
+  if(listName === "Today"){
+    Item.findByIdAndRemove(checked, function(err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("deleted");
+        res.redirect("/");
+      }
+    });
+  }
+  else{
+    List.findOneAndUpdate({name:listName}, {$pull:{items:{_id:checked } }}, function(err,found){
+      if(err){
+        console.log(err)
+      }
+      else{
+        res.redirect("/" + listName);
+      }
+    });
+  }
+
+
 });
 
 app.get("/:topic", function(req, res) {
-  const customName = req.params.topic;
+  const customName = _.capitalize(req.params.topic);
 
   List.findOne({name:customName}, function(err, found) {
     if (!err) {
-      if (found) {
-        res.render("index",{listTitle: found.name, newItems: found.items} );
+      if (!found) {
+        const list = new List({
+        name: customName,
+        items: defa
+          });
+        list.save();
+        res.redirect("/" + customName);
       }
       else {
-          const list = new List({
-          name: customName,
-          items: [defa]
-            });
-          list.save();
+        res.render("index",{listTitle: found.name, newItems: found.items} );
       }
     }
   });
