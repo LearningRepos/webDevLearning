@@ -1,0 +1,71 @@
+.Hover:hover {
+  color: purple;
+}
+
+.Active-P:active {
+  color: orange;
+}
+
+.Focus:focus {
+  color: red;
+}
+
+.Active:focus {
+  color: blue;
+}
+
+.Active:active {
+  background-color: blue;
+}
+
+.Click-Purple:active {
+  background-color: purple;
+}
+
+.Mouse-Green:hover {
+  background-color: green;
+}
+
+.Orange-Focus:focus {
+  background-color: orange;
+}
+
+.Animated-Button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #fcad26;
+  font-size: 16px;
+  font-weight: 300px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  border-radius: 20px;
+  box-shadow: 0 8px #efa424;
+}
+
+.Animated-Button:hover {
+  box-shadow: 0 4px #efa424;
+  top: 2px;
+}
+
+.Animated-Button:active {
+  box-shadow: 0 0px #efa424;
+  top: 6px;
+}
+
+.Transform {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+
+.Transform:hover {
+  transform: translate(100px, 0px);
+  transition: transform 5s ease-out 0;
+}
+
+/*# sourceMappingURL=styles-output.css.map */
