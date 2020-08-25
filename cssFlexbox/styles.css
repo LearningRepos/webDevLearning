@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+body {
+  margin: 0;
+  background: #ecf0f1;
+}
+
+.sidebar {
+  padding: 1%;
+  height: 100vh;
+  width: 15vw;
+  font-family: raleway;
+  background: #34495e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item {
+  color: white;
+  font-size: 20px;
+}
+
+.top-section {
+  margin-top: 10%;
+}
+
+.bottom-section {
+  margin-bottom: 10%;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  right: 1%;
+  top: 5%;
+}
+
+a {
+  font-size: 40px;
+  text-decoration: none;
+  color: #95a5a6;
+  font-family: raleway;
+  border-bottom: 3px solid #52c9aa;
+  margin: 5px;
+}
+
+a:hover {
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
+  transition: all 0.5s ease-out;
+}
+
+i {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 920px) {
+  nav {
+    justify-content: space-around;
+  }
+  a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.box {
+  background-color: #cc0042;
+  flex: 1 1 200px;
+  color: white;
+  font-family: Helvetica;
+  padding: 20px;
+  transition: 0.1s background;
+}
+
+.box:hover {
+  background: #ff0052;
+}
+
+.middle {
+  background-color: #b20039;
+  flex-shrink: 1;
+}
