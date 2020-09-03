@@ -1,0 +1,157 @@
+// consts cannot be changed with primitive types
+const mouse = "Jerry";
+
+// you can change consts if it is an object though
+const arr = [1, 2, 3];
+arr.push(2);
+
+// lets can be changed
+let cat = "Jerry";
+cat = "JERRY";
+
+function letScope() {
+  // hoisting does not work because let has block scope
+  return dog;
+  let dog = "Boi";
+}
+// letScope()
+
+// template strings make concatenation easier
+const corgi = "Small";
+const age = "2";
+// regular concatenation:
+// console.log("This dog is " + corgi + " and age is " + age)
+// template strings
+// console.log(`This dog is ${corgi} and age is ${age}`)
+
+// arrow functions make code easier to read but the keyword 'this' refers to the surrounding object
+// regular map function
+let firstArr = [1, 2, 3, 4].map(function (value) {
+  return value * 2;
+});
+// map arrow function
+let secondArr = [1, 2, 3, 4].map((s) => s * 2);
+
+function tripleAndFilter(arr) {
+  return arr.map((value) => value * 3).filter((value) => value % 5 === 0);
+}
+
+tripleAndFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function doubleOddNumbers(arr) {
+  return arr.filter((val) => val % 2 !== 0).map((val) => val * 2);
+}
+
+doubleOddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function mapFilterAndReduce(arr) {
+  return arr
+    .map((val) => val.firstName)
+    .filter((val) => val.length < 5)
+    .reduce((acc, next) => {
+      acc[next] = next.length;
+      return acc;
+    }, {});
+}
+
+// can add default parameters with =value
+let obj = (fname = "Tom", lname = "Hamilton") => ({
+  firstName: fname,
+  lastName: lname,
+});
+// console.log(obj());
+
+var instructor = {
+  firstName: "Colt",
+  sayHi: function () {
+    setTimeout(() => console.log("Hello " + this.firstName), 1000);
+  },
+};
+
+// instructor.sayHi()
+
+// for of iterates through the values  instead of keys/indices
+function forOfDemon() {
+  for (let i of [1, 2, 3, 4]) {
+    console.log(i);
+  }
+}
+// forOfDemon();
+
+// the rest operator sums up all remaining parameters in an array
+function restDemon(a, b, ...c) {
+  console.log(a, b);
+  console.log(c);
+}
+// restDemon(1,2,3,4,5)
+
+// the spread operator turns an array into individual values
+// console.log(...[1,2,3])
+
+function smallestValue(...c) {
+  return Math.min(...c);
+}
+// smallestValue(4,1,12,0)
+
+function placeInMiddle(arr, vals) {
+  return [
+    ...arr.slice(0, Math.floor(arr.length / 2)),
+    ...vals,
+    ...arr.slice(Math.floor(arr.length / 2)),
+  ];
+}
+// placeInMiddle([1,2,6,7],[3,4,5])
+
+function joinArrays(...c) {
+  let newArr = [];
+  for (i of c) {
+    newArr.push(...i);
+  }
+  return newArr;
+}
+// joinArrays([1],[2],[3])
+
+function sumEvenArgs(...c) {
+  let count = 0;
+  for (i of c) {
+    if (i % 2 === 0) {
+      count += i;
+    }
+  }
+  return count;
+}
+// sumEvenArgs(1,2,3,4)
+
+// if object key and value have the same name then you can specify 1 parameter in object
+let color1 = "red";
+let color2 = "blue";
+let colorPalette1 = { color1, color2 };
+let colorPalette2 = {
+  [color1]: "bright",
+  [color2]: "dark",
+};
+// console.log(colorPalette2)
+
+// can destructure/unpack objects like this
+let { color1: one, color2: two } = colorPalette1;
+// console.log(one,two)
+
+function displayStudentInfo(obj) {
+  let { first: fname, last: lname } = obj;
+  console.log(`Your full name is ${fname} ${lname}`);
+}
+// displayStudentInfo({first: 'Elie', last:'Schoppik'})
+
+function createStudent(likes = { likesJavaScript: true, likesES2015: true }) {
+  let { likesJavaScript: isJs, likesES2015: likesEs } = likes;
+  if (isJs && likesEs) {
+    console.log("The student likes JavaScript and ES2015");
+  } else if (isJs && !likesEs) {
+    console.log("The student likes JavaScript");
+  } else if (!isJs && likesEs) {
+    console.log("The student likes ES2015");
+  } else {
+    console.log("The student likes nothinig");
+  }
+}
+// createStudent({likesJavaScript:false, likesES2015:false});
