@@ -366,4 +366,13 @@ function displayEvenArguments(...c) {
 // console.log(2**2)
 
 // pad start and end compensates for extra space by padding in chosen characters
-console.log("Happy Birthday".padEnd("30", "!"));
+// console.log("Happy Birthday".padEnd("30","!"))
+
+// Object rest allows parameters to be dynamic
+let colors = { red: "red", blue: "blue", green: "green" };
+let { red, blue, ...pallete } = colors;
+// console.log(red,blue,pallete)
+
+// object spread copies an objects property to another object
+let colorPalette = { ...colors, purple: "purple", pink: "pink" };
+// console.log(colorPalette)
