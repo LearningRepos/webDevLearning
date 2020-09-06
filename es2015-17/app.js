@@ -376,3 +376,70 @@ let { red, blue, ...pallete } = colors;
 // object spread copies an objects property to another object
 let colorPalette = { ...colors, purple: "purple", pink: "pink" };
 // console.log(colorPalette)
+
+// Jasmine tests
+let clock = { round: true, color: "grey" };
+
+describe("Clock", function () {
+  it("is round", function () {
+    expect(clock.round).toBe(true);
+  });
+  it("is grey", function () {
+    expect(clock.color).toBe("grey");
+  });
+});
+
+// beforeEach resets value of variable before each test
+describe("Array", function () {
+  let testArr = [1, 2, 3, 4, 5];
+  beforeEach(function () {
+    testArr = [1, 2, 3, 4, 5];
+  });
+  it("pushes correctly", function () {
+    testArr.push(6);
+    expect(testArr).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+  it("is correct length", function () {
+    expect(testArr.push(6)).toEqual(6);
+  });
+});
+
+// aftereach occurs after an it statement
+// adding an x before it makes it pending
+describe("Single Streak", function () {
+  let streak = 0;
+  beforeEach(function () {
+    streak++;
+  });
+  afterEach(function () {
+    streak = 0;
+  });
+  it("increments to one", function () {
+    expect(streak).toEqual(1);
+  });
+  xit("resets to 0 and increments to one again", function () {
+    expect(streak).toEqual(1);
+  });
+});
+
+// before all lets a variable stay regularly after each test
+let mutatedArray = [];
+beforeAll(function () {
+  mutatedArray = [1, 2, 3, 4, 5];
+});
+describe("Mutated Array", function () {
+  it("Pushes 1 element correctly", function () {
+    mutatedArray.push(6);
+    expect(mutatedArray).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+  it("keeps pushing an element", function () {
+    mutatedArray.push(7);
+    expect(mutatedArray).toEqual([1, 2, 3, 4, 5, 6, 7]);
+  });
+});
+describe("Keep Mutating Array", function () {
+  it("Pushes a 3rd element in the array", function () {
+    mutatedArray.push(8);
+    expect(mutatedArray).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+  });
+});
