@@ -7,12 +7,15 @@ const db = require("./models");
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
+app.use(express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/public"));
+
 app.listen(3000, function () {
   console.log("Listening on port 3000");
 });
 
 app.get("/", function (req, res) {
-  res.send("Hello from the root route");
+  res.sendFile(index.html);
 });
 
 app.get("/api/todos", function (req, res) {
@@ -20,23 +23,23 @@ app.get("/api/todos", function (req, res) {
 });
 
 app.post("/api/todos", function (req, res) {
-  db.create(req.body).then((data) => res.json(data));
+  db.Todo.create(req.body).then((data) => res.json(data));
 });
 
 app.get("/api/todos/:todoid", function (req, res) {
-  db.findById(req.params.todoid)
+  db.Todo.findById(req.params.todoid)
     .then((data) => res.json(data))
     .catch((err) => res.send(err));
 });
 
 app.put("/api/todos/:todoid", function (req, res) {
-  db.findOneAndUpdate({ _id: req.params.todoid }, req.body, { new: true })
+  db.Todo.findOneAndUpdate({ _id: req.params.todoid }, req.body, { new: true })
     .then((data) => res.json(data))
     .catch((err) => res.send(err));
 });
 
 app.delete("/api/todos/:todoid", function (req, res) {
-  db.deleteOne({ _id: req.params.todoid }, { new: true })
+  db.Todo.deleteOne({ _id: req.params.todoid }, { new: true })
     .then((data) => res.json({ message: "deleted" }))
     .catch((err) => res.send(err));
   // console.log(req.params.todoid);
