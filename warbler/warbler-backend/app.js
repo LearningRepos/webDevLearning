@@ -1,12 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 const errorHandler = require("./handlers/error");
+const authRoutes = require("./routes/routes");
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/api/auth", authRoutes);
 
 app.use(function (req, res, next) {
   let err = new Error("Not Found");
@@ -18,4 +22,5 @@ app.use(errorHandler);
 
 app.listen(3001, function () {
   console.log("Listening on port 3001");
+  console.log(authRoutes);
 });
