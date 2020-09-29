@@ -9,3 +9,4 @@ mongoose.connect(process.env.MONGO_URL + "", {
 });
 
 module.exports.User = require("./user");
+module.exports.Message = require("./message");
