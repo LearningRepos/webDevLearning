@@ -11,6 +11,6 @@ router.route("/").post(createMessage);
 
 router.route("/:message_id").get(getMessage);
 
-router.route("/:message_id").delete(getMessage);
+router.route("/:message_id").delete(deleteMessage);
 
 module.exports = router;
