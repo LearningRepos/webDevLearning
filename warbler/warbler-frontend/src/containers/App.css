@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  background-color: #e6ecf0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.onboarding {
+  height: 100vh;
+  background-color: #e6ecf0;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.navbar a {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  width: 20px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+}
+
+.onboarding > .navbar {
+  background-image: url("../images/nav-bg.png");
+  background-size: 100% 100%;
+}
+
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/signed-out-home.jpg");
+  background-size: cover;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  background-position: center center;
+  flex-direction: row;
+  color: white;
+  text-shadow: 0 0 8px #66757;
+}
