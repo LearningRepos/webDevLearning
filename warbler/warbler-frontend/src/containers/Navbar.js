@@ -1,26 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import WarblerPic from "../images/warbler-logo.png";
+import Logo from "../images/warbler-logo.png";
 
-class Navbar extends React.Component {
+class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand">
         <div className="container-fluid">
-          <div class="navbar-header">
+          <div className="navbar-header">
             <Link to="/" className="navbar-brand">
-              <img src={WarblerPic} alt="warbler" />
+              <img src={Logo} alt="Warbler Home" />
             </Link>
           </div>
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup">Sign up</Link>
             </li>
             <li>
-              <Link to="/signin">Log In</Link>
+              <Link to="/signin">Log in</Link>
             </li>
           </ul>
+          )}
         </div>
       </nav>
     );
@@ -29,8 +30,8 @@ class Navbar extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    currentUser: state.currentUser,
+    currentUser: state.currentUser
   };
 }
 
-export default connect(mapStateToProps, null)(Navbar);
+export default connect(mapStateToProps)(Navbar);

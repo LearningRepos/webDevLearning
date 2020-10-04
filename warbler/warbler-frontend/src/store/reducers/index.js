@@ -4,7 +4,7 @@ import errors from "./errors";
 
 const rootReducer = combineReducers({
   currentUser,
-  errors,
+  errors
 });
 
 export default rootReducer;
