@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class AuthForm extends Component {
   constructor(props) {
@@ -7,28 +8,41 @@ class AuthForm extends Component {
       email: "",
       username: "",
       password: "",
-      profileImageUrl: "",
+      profileImageUrl: ""
     };
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     const authType = this.props.signUp ? "signup" : "signin";
     this.props
       .onAuth(authType, this.state)
       .then(() => {
-        console.log("LOGGED IN!");
+        this.props.history.push("/");
       })
-      .catch((err) => console.log(err));
+      .catch(() => {
+        return;
+      });
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
     const { email, username, password, profileImageUrl } = this.state;
-    const { signUp, heading, buttonText } = this.props;
+    const {
+      signUp,
+      heading,
+      buttonText,
+      errors,
+      history,
+      removeError
+    } = this.props;
+
+    history.listen(() => {
+      removeError();
+    });
 
     return (
       <div>
@@ -36,7 +50,9 @@ class AuthForm extends Component {
           <div className="col-md-6">
             <form onSubmit={this.handleSubmit}>
               <h2>{heading}</h2>
-
+              {errors.message && (
+                <div className="alert alert-danger">{errors.message}</div>
+              )}
               <label htmlFor="email">E-mail</label>
               <input
                 autoComplete="off"
@@ -94,5 +110,14 @@ class AuthForm extends Component {
     );
   }
 }
+AuthForm.propTypes = {
+  buttonText: PropTypes.string,
+  errors: PropTypes.object,
+  heading: PropTypes.string,
+  history: PropTypes.object,
+  onAuth: PropTypes.func,
+  signIn: PropTypes.bool,
+  removeError: PropTypes.func
+};
 
 export default AuthForm;
