@@ -21,7 +21,7 @@ npm i .
 
 ## What I Learnt
 
-I obviously did a deep dive into some of these concepts(aka Javascript) and sped through some modules without any hesitation (jQuery & Bootstrap) since they were either outdated(DOM Manipulation) or there were better alternatives(Tailwind/Materialize CSS)
+I obviously did a deep dive into some of these concepts(aka Javascript) and sped through some modules without any hesitation (jQuery & Bootstrap) since they were either outdated or there were better alternatives(Tailwind/Materialize CSS/DOM Manipulation)
 
 1. **Angela Yu's Course:**
    HTML/CSS -> Javascript -> Bootstrap -> Javascript & The DOM -> jQuery -> Command Line -> Node -> Express -> APIS -> MySQL -> MongoDB/Mongoose -> REST APIS -> React
